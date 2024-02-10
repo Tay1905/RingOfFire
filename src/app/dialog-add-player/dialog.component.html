@@ -1,0 +1,12 @@
+<h1 class="padding-left" mat-dialog-title>Add New Player</h1>
+<div class="padding-left" mat-dialog-content>
+  <p>Name of the New Player</p>
+  <mat-form-field class="example-form-field padding-left">
+    <mat-label class="padding-left"> Player Name </mat-label>
+    <input class="matInput padding-left" matInput type="text" [(ngModel)]="name">
+  </mat-form-field>
+</div>
+<div class="padding-left" mat-dialog-actions>
+  <button class="padding-left" mat-button (click)="onNoClick()">No Thanks</button>
+  <button mat-button [disabled]="name.length == 0" [mat-dialog-close]="name" cdkFocusInitial>Ok</button>
+</div>
